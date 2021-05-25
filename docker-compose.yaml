@@ -8,3 +8,13 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=secret
       - MYSQL_DATABASE=test
+  node-express:
+    build:
+      context: .
+    container_name: node-express
+    ports:
+      - 5000:5000
+    depends_on:
+      - mysql
+    environment:
+      - MYSQL_HOST=mysql

@@ -1,8 +1,9 @@
 'use strict';
 const mysql = require('mysql');
 //local mysql db connection
+const host = process.env.HOST || localhost;
 const dbConn = mysql.createConnection({
-    host     : 'localhost',
+    host     :  host,
     user     : 'root',
     password : 'secret',
     database : 'test',
