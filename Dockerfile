@@ -7,6 +7,7 @@ RUN npm install
 
 COPY app.js ./app.js
 COPY config ./config
+COPY app ./app
 EXPOSE 5000
 
 CMD node app.js

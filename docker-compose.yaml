@@ -1,7 +1,8 @@
 version: '3.3'
 services:
   mysql:
-    image: mysql:5.7
+    build:
+      context: mysql
     container_name: mysql
     ports:
       - 3306:3306
@@ -17,4 +18,4 @@ services:
     depends_on:
       - mysql
     environment:
-      - MYSQL_HOST=mysql
+      - HOST=mysql
